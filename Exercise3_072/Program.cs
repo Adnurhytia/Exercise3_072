@@ -132,11 +132,15 @@ namespace Exercise_Linked_List_A
             {
                 Console.WriteLine("\nRecords in the list are:\n");
                 Node currentNode;
+
                 currentNode = LAST.next;
                 while (currentNode != null)
                 {
                     Console.Write(LAST.rollNumber + "  " + currentNode.name + "\n");
+                    currentNode = currentNode.next;
                 }
+
+                Console.Write(LAST.rollNumber + "  " + LAST.name + "\n");
             }
 
         }
@@ -146,6 +150,7 @@ namespace Exercise_Linked_List_A
                 Console.WriteLine("\nList is empty");
             else
                 Console.WriteLine("\nThe first record in the list is:\n\n " + LAST.next.rollNumber + "  " + LAST.next.name);
+                
         }
         static void Main(string[] args)
         {
@@ -155,17 +160,19 @@ namespace Exercise_Linked_List_A
                 try
                 {
                     Console.WriteLine("\nMenu");
-                    Console.WriteLine("1. View all the records in the list");
-                    Console.WriteLine("2. Search for a record in the list");
-                    Console.WriteLine("3. Display the first record in the list");
-                    Console.WriteLine("4. Exit");
+                    Console.WriteLine("1. Add a record to the list");
+                    Console.WriteLine("2. Delete a record from the list");
+                    Console.WriteLine("3. View all the records in the list");
+                    Console.WriteLine("4. Search for a record in the list");
+                    Console.WriteLine("5. Display the first record in the list");
+                    Console.WriteLine("6. Exit");
                     Console.Write("\nEnter your choice (1-4) : ");
                     char ch = Convert.ToChar(Console.ReadLine());
                     switch (ch)
                     {
                         case '1':
                             {
-                                obj.traverse();
+                                obj.addNode();
                             }
                             break;
                         case '2':
