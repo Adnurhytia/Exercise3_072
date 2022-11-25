@@ -52,6 +52,13 @@ namespace Exercise_Linked_List_A
                 newNode.next = LAST.next;
                 LAST.next = newNode;
             }
+            //Menambahkan node
+            else if (rollNo > LAST.next.rollNumber)
+            {
+                newNode.next = LAST.next;
+                LAST.next = newNode;
+                LAST = newNode;
+            }
         }
 
         public bool Search(int rollNo, ref Node previous, ref Node current)
