@@ -42,7 +42,31 @@ namespace Exercise_Linked_List_A
             else
                 return false;
         }
+        public void traverse() /*Traverse all the nodes of the list*/
+        {
+            if (ListEmpty())
+                Console.WriteLine("\nList is empty");
+            else
+            {
+                Console.WriteLine("\nRecords in the list are:\n");
+                Node currentNode;
+                currentNode = LAST.next;
+                while (currentNode != null)
+                {
+                    Console.Write(LAST.rollNumber + "  " + currentNode.name + "\n");
+                }
+            }
 
-     
+        }
+        public void firstNode()
+        {
+            if (ListEmpty())
+                Console.WriteLine("\nList is empty");
+            else
+                Console.WriteLine("\nThe first record in the list is:\n\n " + LAST.next.rollNumber + "  " + LAST.next.name);
+        }
+        
+            
+
     }
 }
