@@ -197,7 +197,7 @@ namespace Exercise_Linked_List_A
 
                         case '3':
                             {
-                                obj.firstNode();
+                                obj.traverse();
                             }
                             break ;
                         case '4':
