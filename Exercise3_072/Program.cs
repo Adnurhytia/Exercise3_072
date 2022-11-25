@@ -36,7 +36,9 @@ namespace Exercise_Linked_List_A
             //Membuat objek baru dengan nama newnode
             Node newNode = new Node();
 
-            
+            //Untuk menyimpan list node
+            newNode.rollNumber = rollNo;
+            newNode.name = nm;
         }
 
         public bool Search(int rollNo, ref Node previous, ref Node current)
