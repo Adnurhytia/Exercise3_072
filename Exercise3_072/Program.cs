@@ -46,18 +46,34 @@ namespace Exercise_Linked_List_A
                 newNode.next = newNode;
                 LAST = newNode;
             }
-            //Menambahkan node
+            //Menambahkan node di kiri
             else if (rollNo < LAST.next.rollNumber)
             {
                 newNode.next = LAST.next;
                 LAST.next = newNode;
             }
-            //Menambahkan node
+            //Menambahkan node di kanan
             else if (rollNo > LAST.next.rollNumber)
             {
                 newNode.next = LAST.next;
                 LAST.next = newNode;
                 LAST = newNode;
+            }
+            //Menambahkan node di tengah
+            else
+            {
+                Node curr, prev;
+                curr = prev = LAST.next;
+
+                int i = 0;
+                while (i < rollNo - 1)
+                {
+                    prev = curr;
+                    curr = curr.next;
+                    i++;
+                }
+                newNode.next = curr;
+                prev.next = newNode;
             }
         }
 
