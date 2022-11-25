@@ -6,5 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exercise_Linked_List_A
 {
-
+    class Node
+    {
+       
+       
+    }
 }
