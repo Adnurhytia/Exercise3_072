@@ -80,6 +80,10 @@ namespace Exercise_Linked_List_A
         {
             Node previous, current;
             previous = current = LAST.next;
+
+            if (Search(rollNo, ref previous, ref current) == false)
+                return false;
+            previous.next = current.next;
         }
 
         public bool Search(int rollNo, ref Node previous, ref Node current)
