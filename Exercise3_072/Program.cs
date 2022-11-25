@@ -81,9 +81,26 @@ namespace Exercise_Linked_List_A
             Node previous, current;
             previous = current = LAST.next;
 
+            //Mengecek isi node saat ini masih ada di dalam list atau tidak
             if (Search(rollNo, ref previous, ref current) == false)
                 return false;
             previous.next = current.next;
+
+            //Proses menghapus node
+            if (LAST.next.rollNumber == LAST.rollNumber)
+            {
+                LAST.next = null;
+                LAST = null;
+            }
+            else if (rollNo == LAST.next.rollNumber)
+            {
+                LAST.next = current.next;
+            }
+            else
+            {
+                LAST = LAST.next;
+            }
+            return true;
         }
 
         public bool Search(int rollNo, ref Node previous, ref Node current)
