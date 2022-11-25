@@ -39,6 +39,13 @@ namespace Exercise_Linked_List_A
             //Untuk menyimpan list node
             newNode.rollNumber = rollNo;
             newNode.name = nm;
+
+            //If the list empty
+            if (ListEmpty())
+            {
+                newNode.next = newNode;
+                LAST = newNode;
+            }
         }
 
         public bool Search(int rollNo, ref Node previous, ref Node current)
