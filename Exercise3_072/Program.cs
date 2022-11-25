@@ -20,6 +20,24 @@ namespace Exercise_Linked_List_A
         {
             LAST = null;
         }
+        
+        //Menambahkan Node
+        public void addNode()
+        {
+            int rollNo;
+            string nm;
+
+            Console.Write("\nEnter the roll number of the student: ");
+            rollNo = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("\nEnter the name of student: ");
+            nm = Console.ReadLine();
+
+            //Membuat objek baru dengan nama newnode
+            Node newNode = new Node();
+
+            
+        }
 
         public bool Search(int rollNo, ref Node previous, ref Node current)
         /*Searches for the specified node*/
