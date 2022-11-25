@@ -76,6 +76,11 @@ namespace Exercise_Linked_List_A
                 prev.next = newNode;
             }
         }
+        public bool delNode(int rollNo)
+        {
+            Node previous, current;
+            previous = current = LAST.next;
+        }
 
         public bool Search(int rollNo, ref Node previous, ref Node current)
         /*Searches for the specified node*/
